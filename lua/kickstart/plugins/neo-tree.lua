@@ -3,6 +3,7 @@
 
 return {
   'nvim-neo-tree/neo-tree.nvim',
+  event = 'VimEnter',
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -15,6 +16,7 @@ return {
   },
   opts = {
     filesystem = {
+      hijack_netrw_behavior = 'open_current',
       window = {
         mappings = {
           ['\\'] = 'close_window',
