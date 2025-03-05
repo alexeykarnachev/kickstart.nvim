@@ -487,16 +487,17 @@ require("lazy").setup({
 
 	-- Colorscheme
 	{
-		"folke/tokyonight.nvim",
+		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
-			require("tokyonight").setup({
-				styles = {
-					comments = { italic = false },
+			require("gruvbox").setup({
+				italic = {
+					comments = false,
 				},
+				contrast = "hard",
 			})
 
-			vim.cmd.colorscheme("tokyonight-night")
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 
